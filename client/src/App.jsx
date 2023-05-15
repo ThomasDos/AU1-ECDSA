@@ -9,10 +9,8 @@ function App() {
   const [balance, setBalance] = useState(0)
   const [address, setAddress] = useState('')
   const [privateKey, setPrivateKey] = useState('')
-  let message
-  try {
-    message = toHex(keccak256(utf8ToBytes('alchemy')))
-  } catch (error) {}
+
+  const message = toHex(keccak256(utf8ToBytes('alchemy')))
   return (
     <div className='app'>
       <Wallet
