@@ -7,6 +7,7 @@ const validateSignature = require('./middlewares/validate-signature')
 app.use(cors())
 app.use(express.json())
 
+//Private keys commented and public keys as keys in balances object
 const balances = {
   //fd4d673768c02ac54c285290404b180f4b4505361d4a68865ee55c0358574d36
   '03843c5ccdfc16c38a24fba8a5e633d7d7b39b9e48debcecde36062762316fa319': 100,

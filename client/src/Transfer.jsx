@@ -38,11 +38,7 @@ function Transfer({ address, setBalance, privateKey, message }) {
 
       <label>
         Recipient
-        <input
-          placeholder='Type an address, for example: 0x2'
-          value={recipient}
-          onChange={setValue(setRecipient)}
-        ></input>
+        <input placeholder='Type an address, for example: 0x2' value={recipient} onChange={setValue(setRecipient)} />
       </label>
 
       <input type='submit' className='button' value='Transfer' />

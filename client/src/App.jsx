@@ -11,7 +11,7 @@ function App() {
   const [privateKey, setPrivateKey] = useState('')
   let message
   try {
-    message = toHex(keccak256(utf8ToBytes('zeubi')))
+    message = toHex(keccak256(utf8ToBytes('alchemy')))
   } catch (error) {}
   return (
     <div className='app'>

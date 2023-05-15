@@ -23,13 +23,11 @@ function Wallet({ address, setAddress, balance, setBalance, privateKey, setPriva
       } else {
         setBalance(0)
       }
-    } catch (error) {}
+    } catch (error) {
+      setAddress('')
+      setBalance(0)
+    }
   }
-
-  let addressHex
-  try {
-    addressHex = toHex(address)
-  } catch (error) {}
 
   return (
     <div className='container wallet'>
@@ -40,7 +38,7 @@ function Wallet({ address, setAddress, balance, setBalance, privateKey, setPriva
         <input placeholder='Type your private key' value={privateKey} onChange={onChange} />
       </label>
 
-      <div>{addressHex}</div>
+      <div>Your public address : {address.slice(-20, address.length)}</div>
 
       <div className='balance'>Balance: {balance}</div>
     </div>
